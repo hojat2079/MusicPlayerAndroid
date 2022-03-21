@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="70"
+            android:orientation="vertical"
+            android:weightSum="70">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:orientation="horizontal">
+
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/label_artist_player"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    app:actualImageResource="@drawable/cover_evan"
+                    app:roundedCornerRadius="8dp"
+                    app:viewAspectRatio="1" />
+
+                <TextView
+                    android:id="@+id/artist_music_player"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:text="Evan Band"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/cover_music_player"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="52.5"
+                app:actualImageResource="@drawable/chehel_gis"
+                app:roundedCornerRadius="12dp"
+                app:viewAspectRatio="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="7.5"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="TODO"
+                    app:srcCompat="@drawable/ic_baseline_music_note_24"
+                    app:tint="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/title_music_player"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="@string/chehel_gis"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:srcCompat="@drawable/ic_baseline_music_note_24" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_player"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom|center"
+            android:layout_weight="30"
+            android:background="@drawable/player_background">
+
+            <TextView
+                android:id="@+id/txt_PlayList_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="@string/playlist"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon_playList_main"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:contentDescription="@string/todo"
+
+                app:layout_constraintBottom_toTopOf="@id/txt_PlayList_main"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_baseline_keyboard_arrow_up_24"
+                app:tint="@color/colorPrimary" />
+
+            <ImageButton
+                android:id="@+id/btn_next_player"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/next_previous_btn_play"
+                android:contentDescription="@string/todo"
+                android:padding="4dp"
+                app:layout_constraintBottom_toBottomOf="@id/btn_play_player"
+                app:layout_constraintStart_toEndOf="@id/btn_play_player"
+                app:layout_constraintTop_toTopOf="@id/btn_play_player"
+                app:srcCompat="@drawable/ic_baseline_skip_next_24" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_play_player"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/btn_play_background"
+                android:padding="4dp"
+                app:fabCustomSize="60dp"
+                app:layout_constraintBottom_toTopOf="@id/icon_playList_main"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_baseline_play_arrow_24" />
+
+            <ImageButton
+                android:id="@+id/btn_previous_player"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/next_previous_btn_play"
+                android:contentDescription="@string/todo"
+                android:padding="4dp"
+                app:layout_constraintBottom_toBottomOf="@id/btn_play_player"
+                app:layout_constraintEnd_toStartOf="@id/btn_play_player"
+                app:layout_constraintTop_toTopOf="@id/btn_play_player"
+                app:srcCompat="@drawable/ic_baseline_skip_previous_24" />
+
+            <ImageButton
+                android:id="@+id/btn_shuffle_player"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:background="@null"
+                android:contentDescription="@string/todo"
+                app:layout_constraintBottom_toBottomOf="@id/btn_play_player"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btn_play_player"
+                app:srcCompat="@drawable/ic_baseline_shuffle_24" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/slider_music_play"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:value="0"
+                android:valueFrom="0"
+                android:valueTo="100"
+                app:haloColor="@color/colorWhite"
+                app:labelBehavior="gone"
+                app:layout_constraintBottom_toTopOf="@id/btn_play_player"
+                app:thumbRadius="10dp"
+                tools:layout_editor_absoluteX="20dp" />
+
+            <ImageButton
+                android:id="@+id/btn_like_player"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="20dp"
+                android:background="@null"
+                android:contentDescription="@string/todo"
+                app:layout_constraintBottom_toBottomOf="@id/btn_play_player"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btn_play_player"
+                app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+
+            <TextView
+                android:id="@+id/txt_current_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="00:00"
+                app:layout_constraintBottom_toTopOf="@+id/slider_music_play"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_total_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="@string/_04_32"
+                app:layout_constraintBottom_toTopOf="@id/slider_music_play"
+                app:layout_constraintEnd_toEndOf="@id/slider_music_play" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MusicPlayer</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="lyrics">lyrics</string>
+    <string name="todo">TODO</string>
+    <string name="chehel_gis">Chehel Gis</string>
+    <string name="_04_32">04:32</string>
+    <string name="playlist">PlayList</string>
+</resources>
