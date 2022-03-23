@@ -2,7 +2,6 @@
 
 A Simple MusicPlayer with Kotlin Language
 
-![image1](https://s6.uupload.ir/files/1_48z4.jpg)
-![image2](https://s6.uupload.ir/files/2_pick.jpg)
-![image3](https://s6.uupload.ir/files/3_2n5.jpg)
-![image4](https://s6.uupload.ir/files/4_kbog.jpg)
+![image1](https://s6.uupload.ir/files/1_952t.png)
+![image2](https://s6.uupload.ir/files/2_02k.png)
+![image3](https://s6.uupload.ir/files/3_trlf.png)
